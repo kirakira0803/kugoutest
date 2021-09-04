@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/play.css">
+</head>
+<body>
+	
+	<!-- F1: 歌曲信息栏 -->
+	<div class="f1">
+		<div class="row">
+			<div id="fanhui" class="col-1">
+				<img src="img/left.png" >
+			</div>
+			<div class="col-2">
+				日落大道-歌手2017第一季第十期音乐纯享版
+			</div>
+		</div>
+		<div class="separator left"></div>
+		<div class="separator right"></div>
+		<div class="name">梁博</div>
+		<div class="row2">
+			<div class="col-3">
+				标准<img src="img/down.png" >
+			</div>
+			<div class="col-4">音效</div>
+			<div class="col-5">
+				封面<img src="img/down.png" >
+			</div>
+		</div>
+	</div>
+	
+	<!-- f2 -->
+	<div class="f2">
+		<div class="dazhuanpan"><img id="daZhuanPa" src="./img/big/1.jpg"></div>
+		 <div id="jianBian" class="jianBian">
+			<div class="geci">我们寻找着在这条路的中间</div>
+			<div class="geci">我们迷失着在这条路的两端</div>
+		</div>
+		<div class="guding">
+			<div class="micro"><img src="img/micro.png"></div>
+			<div class="danm"><img src="img/danmu.png"></div>
+		</div>
+	</div>
+	<div class="change">
+		<div class="row">
+		<div id="dianf" class="change-pointf" onclick="myFunctionf"></div>
+		<div id="dians" class="change-points" onclick="myFunctions"></div>
+		</div>
+	</div> 
+	<!-- f3 -->
+	<div class="f3">
+		<div class="row">
+			<div class="col">
+				<div class="fav">
+					<img id="fav" src="img/xin2.png" alt="收藏">
+					<span id="txt"></span>
+				</div>
+			</div>
+			<div class="col">
+				<div class="download">
+					<a id="aa" href="" download>
+						<img id="download" src="img/download2.png" alt="下载">	
+					</a>	
+				</div>
+			</div>
+			<div class="col">
+				<div class="dis">
+					<img id="dis" src="img/dis.png" alt="评论">
+				</div>
+			</div>
+			<div class="col">
+				<div class="share">
+					<img id="share" src="img/share.png" alt="分享">
+				</div>
+			</div>
+			<div class="col">
+			<!-- 	<div class="row">
+					<div class="more"></div>
+					<div class="more"></div>
+					<div class="more"></div>
+				</div> -->
+				<div class="more">
+					<img id="more" src="img/more.png" alt="更多">
+				</div>
+			</div>
+		</div>
+		<!-- 进度条 -->
+		<div class="row">
+			<div class="time-col">
+				<span id="start" class="time start"></span>
+			</div>
+			<div class="process-col">
+				<div id="processBar" class="process-bar">
+					<div class="process" id="process"></div>
+					<div class="control" id="control"></div>
+				</div>
+			</div>
+			<div class="time-col">
+				<span id="end" class="time end"></span>
+			</div>
+		</div>
+	</div>
+	
+	<!-- F4 -->
+	<div class="f4">
+		<div class="row">
+			<div class="col col1">
+				<!-- 顺序播放 -->
+				<div class="left">
+					<img id="sX" class="sx" src="img/next2.png">
+				</div>
+				
+			</div>
+			<div class="col col2">
+				<div class="l">
+				<!-- 上一首 -->
+				<img id="btnSys" src="img/Backward.png">
+				</div>
+			</div>
+			<div class="col col3">
+				<!-- 播放 -->
+				<div class="cen">
+					<img id="btnBofang" class="bf" src="img/play.png">
+				</div>
+			</div>
+			<div class="col col4">
+				<!-- 下一首 -->
+				<div class="r">
+					<img id="btnXys" src="img/next.png">
+				</div>
+				
+			</div>
+			<div class="col col5">
+				<!-- 列表 -->
+				<div class="right">
+					<img id="btnCd" class="cd" src="img/list2.png">
+				</div>	
+			</div>
+		</div>
+	</div>
+	<!-- 看不见的音频播放元素 -->
+	<audio id="bgm" src="audio/2.mp3" >
+		当前浏览器不支持audio
+	</audio>
+	<script src="js/mui.js"></script>
+	<script src="js/play.js"></script>
+	
+</body>
+</html>

@@ -1,0 +1,58 @@
+html{
+	height: 100%;
+}
+body{
+	height: 100%;
+	background-color: #fff;
+	margin: 0;
+	background-image: url(../img/backgroud.png);
+	background-size: 100% 100%;
+	font-family: "华文楷体";
+	font-size: 1.2rem;
+	background-attachment: fixed;
+}
+
+.back{
+	position: fixed;
+	width: 2.87vw;
+	height: 4.50vh;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+#lrc{
+	/* 隐藏文本域 */
+	display: none;
+}
+
+.lrc{
+	
+	width:60%;
+	height: 74%;
+	 /* border: 1px solid red; */
+	margin: 10% 20%;
+	text-align: center;
+	color: #ccc;
+	font-size: 1rem;
+	line-height: 20px; 
+	overflow: hidden;
+}
+.content{
+	position: relative;
+	left: 0;
+	top: 0px;
+}
+
+.play{
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #0c80e3;
+	width: 8.28vh;
+	height: 8.28vh;
+	border-radius: 50%;
+	line-height: 8.28vh;
+	margin-bottom: 0vh;
+}
+.play-ing {
+	margin-left: 3.7vh;
+}

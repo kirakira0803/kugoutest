@@ -1,0 +1,348 @@
+html{
+	/* 高度h：占父元素（即屏幕）高度的100% */
+	height: 100%;
+}
+
+body{
+	/* 高度h占父元素的100%（即html） */
+	height: 100%;
+	background-color: #fff;
+	margin: 0;
+	background-image: url(../img/backgroud.png);
+	background-size: 100% 100%;
+	font-family: "华文楷体";
+	color: white;
+}
+body::after{
+	content: '';
+	display: table;
+}
+img{
+	vertical-align: middle;
+}
+.row{
+	/* 显示模式-d:弹性容器 */
+	display: flex;
+}
+
+
+/* F1相关样式 */
+.f1{
+	padding-top: 5.00vh;
+}
+.f1 .col-1{
+	flex: 1;
+	text-align: center;
+	width: 2.87vw;
+	height: 4.50vh;
+	padding-top: 0.80vh;
+}
+.f1 .col-2{
+	flex: 9;
+	width: 85.00vw;
+	height: 4.50vh;
+	vertical-align: middle;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-size: 1.3rem;
+}
+.f1 .col-1:active{
+	background-color: rgba(255,255,255,0.3);
+	/* 内间距-p */
+	/* padding: 3px; */
+	/* 边框圆角半径 */
+	/* border-radius: 3px; */
+}
+
+.separator{
+	position: fixed;
+	/* 上边框——bt */
+	border-top: 1px solid #ffffff;
+	/* 宽度 */
+	width: 4.91vw;
+	/* 下边到屏幕底边的距离 */
+	top: 12.00vh;
+}
+.separator.left{
+	left: 40.18vw;
+}
+.separator.right{
+	right: 40.18vw;
+}
+.name{
+	font-size: .96rem;
+	text-align: center;
+	align-items: center;
+}
+.row2{
+	display: flex;
+	padding-top: 1.5vh;
+}
+.f1 .col-3{
+	flex: 2;
+	/* 绝对定位 */
+	position: absolute;
+	left: 32.50vw;
+	width: 8.0vw;
+	height: 2.34vh;
+	text-align: center;
+	vertical-align: middle;
+	border: white 1px solid;
+	border-radius: 3px; 
+	font-size: 0.6px;
+}
+.f1 .col-4{
+	flex: 1;
+	/* 绝对定位 */
+	position: absolute;
+	left: 45.80vw;
+	width: 8.00vw;
+	height: 2.34vh;
+	text-align: center;
+	vertical-align: middle;
+	border: white 1px solid;
+	border-radius: 3px;
+	font-size: 0.6px;
+}
+.f1 .col-5{
+	flex: 2;
+	/* 绝对定位 */
+	position: absolute;
+	right: 32.59vw;
+	width: 8.00vw;
+	height: 2.34vh;
+	text-align: center;
+	vertical-align: middle;
+	border: white 1px solid;
+	border-radius: 3px;
+	font-size: 0.6px;
+}
+
+/* f2相关样式 */
+@keyframes xuanZhuan{
+	0%{
+			transform: rotate(0);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+} 
+
+.dazhuanpan{
+	overflow:hidden
+	vertical-align: bottom
+}
+.f2{
+		overflow:hidden 
+}
+.f2 .dazhuanpan img{
+	/* 动画：名称 持续时间 速度 循环次数 */
+	animation: xuanZhuan 8s linear infinite;
+	width: 73.14vw;
+	height: 73.14vw;
+	border: 5px solid #4a4c3a;
+	border-radius: 50%;
+	margin-left: 12.05vw; 
+	margin-top: 4vh;
+	animation-play-state: paused;
+
+}
+.geci{
+	font-size: 1.2rem;
+	text-align: center;
+	margin-top: .92vh;
+	line-height: 4.9vh;
+	width: 72.67vw;
+	margin-left: auto;
+	margin-right: auto;
+	/* letter-spacing: .04rem; */
+} 
+
+.micro{
+	position: fixed;
+	bottom: 33.53vh;
+	right: 4.44vw;
+}
+.danm{
+	position: fixed;
+	right: 4.44vw;
+	bottom: 27.84vh;
+}
+
+.change{
+	position: fixed;
+	margin-left: 47.59vw;
+	/* margin-right: 47.59vw; */
+}
+.change-pointf{
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;
+	background-color: #fff;
+	margin: 1.48vw;
+	/* text-align: center; */
+}
+.change-points{
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;
+	background-color: #aeb9c0;
+	margin: 1.48vw;
+	/* text-align: center; */
+}
+
+.f3{
+	/* border-top:1px  solid blue; */
+	height: 8.13vh;
+	/* border-bottom: 1px  solid blue; */
+	padding-top:6vh;
+}
+.f3 .col{
+	flex:1;
+	text-align: center;
+	/* line-height: 2.97; */
+}
+	
+/* .f3 .more{
+	line-height: 8.13vh;
+	margin-top:1.2vh ;
+	border:2.7px solid #ccd1d6;
+	border-radius: 50%;
+	background-color: #ccd1d6;
+	margin-left: .83vw;
+}
+ */
+	
+.f3 .more{
+	position: relative;
+	top:1px;
+}
+/* .f3 .row:nth-child(1){
+	border-bottom: 1px solid blue;
+}
+ */
+.f3 .row:nth-child(2){
+	padding-top: 2.5vh;
+	position: relative;
+	/* padding-bottom: 1.9vh; */
+	/* height: 5.2vh; */
+}
+
+.process-bar{
+	width: 75vw;
+	height: 2px;
+	background-color: #bdb7d0;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.process{
+	height: 100%;
+	width: 0%;
+	background-color:  #0c80e3;
+}
+	
+.control{
+	width: 2.78vw;
+	height:2.78vw;
+	border-radius: 50%;
+	background-color: #fff;
+	position: absolute;
+	left:0%;
+	top:-4px;
+}
+
+.time{
+	color: #fff;
+	font-size: 0.6rem;
+}
+
+.time-col{
+	flex:12.6;
+	text-align: center;
+	position: relative;
+	top:-9px;
+}
+	
+.process-col{
+	flex: 75;
+}
+
+
+/* f4相关样式 */
+.f4{
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0vh;
+}
+.f4 .col{
+	flex: 1;
+	text-align: center;
+}
+.sx{
+	margin-top: 3vh;
+}
+/* 上一首 */
+.l{
+	/* display: inline-block; */
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #0c80e3;
+	width: 5.63vh;
+	height: 5.63vh;
+	border-radius: 50%;
+	line-height: 5.63vh;
+	margin-top: 1.3vh;
+}
+/* 中间按钮 */
+.cen{
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #0c80e3;
+	width: 8.28vh;
+	height: 8.28vh;
+	border-radius: 50%;
+	line-height: 8.28vh;
+	margin-bottom: 2.14vh;
+}
+.bf{
+	position: relative;
+	left: 2px;
+}
+/* 下一首 */
+.r{
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #0c80e3;
+	width: 5.63vh;
+	height: 5.63vh;
+	border-radius: 50%;
+	line-height: 5.63vh;
+	margin-top: 1.3vh;
+}
+.cd{
+	margin-top: 3vh;
+}
+/* 点击变暗15% */
+.l:active{
+	background-color: #0969bd;
+}
+.cen:active{
+	background-color: #0969bd;
+}
+.r:active{
+	background-color: #0969bd;
+}
+.sx:active{
+	border: 1px solid #fff;
+	padding: 2px;
+	border-radius: 20%;
+}
+.cd:active{
+	border: 1px solid #fff;
+	padding: 2px;
+	border-radius: 20%;
+}

@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+	<!-- 页面中文字的编码方式 -->
+	<meta charset="UTF-8" />
+	<!-- 定义视口 -->
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<!-- 链接外部的样式文件 -->
+	<link rel="stylesheet" href="css/index.css"/>
+	<title></title>
+</head>
+<body>
+	<!-- horizontal rule:水平分割线 -->
+	<!-- F1：顶不得导航菜单栏 -->
+	<div class="f1">
+		<div class="row">
+			<div class="col left">
+				<img src="img/hamburger.png">
+			</div>
+			<div class="col center active">
+				<span>听</span>
+			</div>
+			<div class="col center ">
+				<span>看</span>
+			</div>
+			<div class="col center ">
+				<span>唱</span>
+			</div>
+			<div class="col right">
+				<img src="img/search.png">
+			</div>
+		</div>
+	</div>
+	<!-- F2：用户信息栏 -->
+	<div class="f2">
+		<div class="row">
+			<div class="avatar-email jz"><img src="img/avatar.png"></div>
+			<div class="vip-name">
+				<!-- 用户名听歌时间同占第二列，需要另外一个class名 -->
+				<div class="cow">
+					<div class="row">
+						<div class="nv">胡萝北</div>
+						<div class="nv jz"><img src="img/vip.png"></div>
+					</div>
+					<div>
+					</div>
+					<div class="row">
+						<div class="lv">lv.5</div>
+						<div class="listen-time">听歌15302分钟</div>
+					</div>
+				</div>
+			</div>
+			<div class="avatar-email em"><img src="img/email.png"></div>
+		</div>
+	</div>
+	<!-- F3:功能菜单 -->
+
+	<div class="f3" >
+		<div class="row">
+			<div class="col">
+				<img src="img/pc.png">
+				<div class="menu-name name">本地音乐</div>
+				<div class="songcount number">148</div>
+			</div>
+			<div class="col">
+				<img src="img/heart.png">
+				<div class="enjoy-list name">喜欢·歌单</div>
+				<div class="enjoy-count number">3</div>
+			</div>
+			<div class="col">
+				<img src="img/dwonload.png">
+				<div class="download-list name">下载</div>
+				<div class="download-count number">2</div>
+			</div>
+			<div class="col">
+				<img src="img/clock.png">
+				<div class="recent name">最近</div>
+				<div class="recent-list number">100</div>
+			</div>
+		</div>
+	</div>
+	<!-- F4：六宫格 -->
+	<div class="f4">
+		<!-- 一行六列 -->
+			<div class="row">
+				<div class="col">
+					<div class="circle lib"><img src="img/lib.png"></div>
+					<div class="circle-name">乐库</div>
+				</div>
+				<div class="col">
+					<div class="circle list"><img src="img/list.png"></div>
+					<div class="circle-name">歌单</div>
+				</div>
+				<div class="col">
+					<div class="circle chart"><img src="img/chart.png"></div>
+					<div class="circle-name">电台·酷群</div>
+				</div>
+				<div class="col">
+					<div class="circle like"><img src="img/radio.png"></div>
+					<div class="circle-name">猜你喜欢</div>
+				</div>
+				<div class="col">
+					<div class="circle calender"><img src="img/calendar.png"></div>
+					<div class="circle-name">每日推荐</div>
+				</div>
+				<div class="col">
+					<div class="circle speech"><img src="img/speech.png"></div>
+					<div class="circle-name">听歌识曲</div>
+				</div>
+			</div> 
+	</div> 
+	<!-- F5：系统消息栏 -->
+	<div class="f5"> 
+		<div class="row">
+			<div class="sound"><img src="img/sound.png"></div>
+			<div class="popular">推广</div>
+			<div class="comfortable h-z">装了这个app,不用再去KTV</div>
+		</div>
+	</div>
+	<!-- f5-5放在Body的最后面， -->
+	<div class="f5-5"></div>
+	<!-- F6：播放控制栏 -->
+	<div class="f6">
+		<div class="row">
+			<!-- 图像和其他功能按钮（包括进度条） -->
+			<div class="disc"><img id="disc" src="img/small/1.jpg"></div>
+			<div class="function cow">
+				<!-- 进度条显示 -->
+				<div id="progressBar" class="progress-bar">
+					<div id="progressValue" class="progress"></div>
+					<div id="progressControl" class="control"></div>
+				</div>
+				<!-- 下方的曲名和歌手 -->
+				<div class="row">
+					<div class="cow">
+						<div class="s-name ">日落大道-歌手2017第十一期音乐纯享版</div>
+						<div class="ser-name">梁博</div>
+					</div>
+					<div class="menu">
+						<img id="btnPlay" src="img/play.png">
+						<!-- <img id="pause" src="img/pause.png"> -->
+					</div>
+					<div class="menu"><img id="btnNext" src="img/next.png"></div>
+					<div class="menu"><img id="btnMenu" src="img/menu.png"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- f7:看不见的音频播放元素 -->
+	<audio id="bgm" src="audio/1.mp3"></audio>
+	<script src="js/mui.js"></script>
+	<script src="js/index.js"></script>
+	<script>  
+	    var scroll = document.getElementById('progressBar');
+	    var bar = document.getElementById('progressControl');
+	    var mask = document.getElementById('progressValue');
+	    var barleft = 0;
+	    bar.onmousedown = function(event){
+	      var event = event || window.event;
+	      var leftVal = event.clientX - this.offsetLeft;
+	      var that = this;
+	       // 拖动一定写到 down 里面才可以
+	      document.onmousemove = function(event){
+	        var event = event || window.event;
+	        barleft = event.clientX - leftVal;     
+	        if(barleft < 0)
+	          barleft = 0;
+	        else if(barleft > scroll.offsetWidth - bar.offsetWidth)
+	          barleft = scroll.offsetWidth - bar.offsetWidth;
+	        mask.style.width = barleft +'px' ;
+	        that.style.left = barleft + "px";
+	        //防止选择内容--当拖动鼠标过快时候，弹起鼠标，bar也会移动，修复bug
+	        window.getSelection ? window.getSelection().removeAllRanges() : document.selection.empty();
+	      }
+	    }
+	    document.onmouseup = function(){
+	      document.onmousemove = null; //弹起鼠标不做任何操作
+	    }
+	  </script>
+</body>
+</html>

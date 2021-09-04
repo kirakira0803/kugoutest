@@ -1,0 +1,411 @@
+/* 选中html元素 */
+html{
+	/* 高度 */
+	height: 100%;
+	/* height: 97.08%;
+	bottom: 0; */
+}
+
+
+/* 选中body元素 */
+body{
+	/* 背景颜色 */
+	background-color: white;
+	/* 背景图片-bgi */
+	background-image: url(../img/bg2.jpg);
+	/* 背景图片大小-bgs*/
+	-webkit-background-size: ;
+	background-size: 100% 100%;
+	/* 背景图的附加方式-bga：滚动/固定 */
+	background-attachment: fixed;
+	/* 外间距m-清除 */
+	margin: 0;
+	/* 默认文本字体 */
+	font-family:"华文楷体";
+	/* 默认文本颜色 */
+	color: white;
+}
+/* 选中body的第一个子元素之前 */
+body::before{
+	/* 生成第一个子元素 */
+	content:"";
+	/* x新的第一个子元素显示模式为table */
+	display:table;
+}	
+body::after{
+	/* 生成新的最后一个子元素 */
+	content:"";
+	/* 新的最后一个子元素显示模式为table */
+	display:table;
+}
+img{
+	/* 图片与同一行中的文字竖直默认中线对齐 */
+	vertical-align: middle;
+	/* 竖直方向上的“中央”是 middle ,不是"center"*/
+}
+
+/* 弹性布局中的弹性容器 */
+.row{
+	/* 显示模式-d：弹性容器 */
+	display:flex;
+	/* 弹性容器允许换行吗：允许 */
+	/* flex-wrap:nowrap;默认值 */
+	flex-wrap: wrap;/*允许换行*/
+	/* text-align: center; */
+}
+.cow{
+	/* 默认显示模式 */
+	display: block;
+}
+
+/* 选中class="f1"的容器 */
+.f1{
+	/* 一行文本的高度*/
+	line-height: 7.92vh;
+	/* 下边框-bb */
+	border-bottom: 0 solid rgba(255,255,255,0);
+	/* padding: 2.5vh; */
+	margin-top: 2.92vh;
+	/* height: 10.83vh; */
+	text-align: center;
+}
+
+.f1 .col.left{
+	flex:164;
+}
+.f1 .col.center{
+	flex:222;
+	font-family: "幼圆";
+	color: #0676df;
+	font-size: .96rem;
+}
+.f1 .col.right{
+	flex:198;
+}
+.f1 .col.center.active span{
+	font-size: 1.2rem;
+	/* 下边框-bb */
+	border-bottom: 1px solid #0a8ec5;
+	padding-left: .44vw;
+	padding-right: .44vw;
+	padding-bottom: 2.1vh;
+	/* 渐变色文字步骤1：文字颜色变透明 */
+	color: transparent;
+	/* 渐变色文字步骤2：添加渐变色背景图片 */
+	background-image: linear-gradient( to top,#43d5eb,#fff);
+	/* 渐变色文字步骤3：以文字为依据进行背景裁剪 */
+	-webkit-background-clip: text;
+}
+/* F2相关的样式 */
+.f2{
+	border-bottom: 1px solid #0a8ec5;
+	padding-top: 1.61vh;
+	padding-bottom: 1.61vh;
+	margin-left: 3.61vw;
+	/* 右外间距-mr */
+ 	margin-right: 3.61vw; 
+}
+.f2 .avatar-email{
+	/* flex: 1; */
+	text-align: center;
+}
+.f2 .vip-name{
+	flex:3;
+}
+.f2 .nv{
+	font-size: 0.6rem;
+	padding: 3px;
+}
+.f2 .lv{
+	color: #f9a80b;
+	border-color: #f9a80b;
+	font-size: 1rem;
+	transform:scale(.5);
+	line-height: 2.96vh;
+	width: 9vw;
+	border: 1.5px solid #f9a80b;
+	border-radius: 3px;
+	text-align: center;
+}
+.f2 .listen-time{
+	font-size: 1rem;
+	transform:scale(.5); 
+	color: #b5b4b1;
+	text-align: left;
+	/* 相对定位 */
+	position: relative;
+	/* 元素左边到参照物左侧的距离 */
+	left: -28px;
+
+}
+
+.f2 .em{
+	/* 相对定位 */
+	position: relative;
+	/* 元素左边到参照物左侧的距离 */
+	left: -28px;
+	/* 元素上边到参照物顶部的距离 */
+	top: 8px;
+}
+/* F3相关的样式 */
+.f3{
+	/* 下边框-bb：粗细，样式，颜色 */
+	border-bottom: .833vh solid rgba(54,214,216,.15);
+	/* height: 15vh; */
+
+}
+/* 选中.f3下的所有.col */
+.f3 .col{/*有空格代表一个class下另一个class，无空格表示同一个元素具有两个class
+	/* 弹性权重/占比-fx */
+	flex: 1;
+	text-align: center;
+	font-size:.72rem ;
+	/* 上内边距-pt,此处不宜使用上外边距 */
+	padding-top: 2.55vh;
+	padding-bottom: 1.61vh;
+}
+.f3 .name{
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+.f3 .number{
+	color: #a5a1a1;
+}
+/* F4相关的样式 */
+.f4{
+	/* 下边框 */
+	border-bottom: 1px solid #0a8ec5; 
+	/* 左外间距-ml */
+	margin-left: 3.61vw;
+	/* 右外间距-mr */
+	margin-right: 3.61vw;
+	padding-top: 1.98vh;
+}
+
+.f4 .col{
+	/* 弹性占比-fx */
+	/* flex:1; */
+	/* 因为要允许换行，弹性权重占比各为1
+	 会无效，需要注释掉*/
+	/* 文本居中_tac */
+	text-align: center;
+	/* 宽度-w */
+	width: 33.33%;
+}
+
+.f4 .circle{
+	/* 宽度-w */
+	width: 15.19vw;
+	/* 高度-h */
+	height: 15.19vw;
+	/* 边框圆角半径 */
+	border-radius: 50%;
+	/* 文字居中，设置一行文字/图片的高度 */
+	line-height: 15.19vw;
+	/* 控制左右的外间距，实现块级元素的居中 */
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 1.57vh;
+	
+}
+
+.circle-name{
+	/* 字体大小 */
+	font-size: .6rem;
+	color: #87cbcc;
+	padding-bottom: 2.19vh;
+}
+
+.lib{
+	/* 背景颜色 */
+	background-color: #06b062;
+}
+.lib:active{
+	background-color: #048a4b;
+}
+.list{
+	/* 背景颜色 */
+	background-color: #067ab0;
+}
+.list:active{
+	background-color: #045f8a;
+}
+.chart{
+	background-color: #e62134;
+}
+.chart:active{
+	background-color: #bf1b2b;
+}
+.like{
+	background-color: #c25bd1;
+}
+.like:active{
+	background-color: #9e4bab;
+}
+.calender{
+	background-color: #edb231;
+}
+.calender:active{
+	background-color: #c7952a;
+}
+.speech{
+	background-color: #4be22d;
+}
+.speech:active{
+	background-color: #3fbd26;
+}
+
+/* 选中.f4下面的第一个.col下面的Img */
+.f4 .col:nth-child(1) img{
+	/* 相对定位 */
+	position: relative;
+	/* 元素左边到参照物左侧的距离 */
+	left: -2px;
+	/* 元素上边到参照物顶部的距离 */
+	top: -2px;
+}
+.f4 .col:nth-child(3) img{
+	/* 相对定位 */
+	position: relative;
+	/* 元素上边到参照物顶部的距离 */
+	top: -2px;
+}
+
+/* F5相关的样式 */	
+.f5{
+	border-bottom: 1px solid #0a8ec5;
+	margin-left: 3.61vw;
+	/* 右外间距-mr */
+	margin-right: 3.61vw;
+}
+.f5 .row{
+	padding-top: 1.5vh;
+	padding-bottom: 1.5vh;
+}
+.f5 .sound{
+	flex:1;
+	text-align: center;
+}
+.f5 .popular{
+	flex:3;
+	text-align: left;
+	font-size: .72rem;
+	color: #87cbcc;
+	position: relative;
+	/* 元素上边到参照物顶部的距离 */
+	top: 4px;
+}
+	
+.f5 .comfortable{
+	flex: 4;
+	text-align: center;
+	color: #abc2d0;
+	/* 变形：缩小至60% */
+	font-size: .6rem;
+	position: relative;
+	/* 元素上边到参照物顶部的距离 */
+	top: 3px;
+}
+
+/* F6相关的样式 */
+.f5-5{
+	/* 高度 */
+	height: 12vh;
+}
+.f6{
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #151f28;
+	height: 8.75vh;
+}
+/* 步骤1：创建一个关键帧动画 */
+@keyframes xuanZhuan{
+	0%{
+			transform: rotate(0);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+/* 步骤2：使用刚刚创建的关键帧动画 */
+.f6 .disc img{
+	/* 动画：名称 持续时间 速度 循环次数 */
+	animation: xuanZhuan 5s linear infinite;
+	animation-play-state: paused;
+	height: 14.23vw;
+	width: 14.23vw;
+	border-radius: 6vh; 
+	border: 5.5px solid #151F28;
+	/* 上外间距：负值，可以往上提元素 */
+	margin-top: -10px;
+	margin-left: 10px;
+}
+
+.f6 .function{
+	flex: 1;
+	text-align: center;
+	padding-top: 1.8vh;
+	padding-right: 3.3vw;
+	margin-left: 7px;
+}
+.progress-bar{
+	/* 宽度 */
+	width: 100%;
+	/* 高度 */
+	height: 1px;
+	/* 背景颜色 */
+	background-color: #01182d;
+	position: relative;
+	margin-bottom: 1.2vh;
+}
+.progress{
+	width: 0%;
+	height: 100%;
+	background-color: #2190f3;
+
+}
+.control{
+	/* 宽度 */
+	width: 7px;
+	/* 高度 */
+	height: 7px;
+	/* 背景颜色 */
+	background-color: #2190f3;
+	/* 边框圆角半径 */
+	border-radius: 50%;
+	/* 定位方式：绝对定位 */
+	position: absolute;
+	/* 到参照物(父元素)左侧的距离 */
+	left: 0%;
+	/* 到参照物(父元素)顶部距离 */
+	top: -2px;
+}
+
+.f6 .s-name{
+	font-size: .6rem;
+	font-family: "华文楷体";
+	width: 38.74vw;
+	/* 文字自动变省略号步骤1：不允许文字(在空白处)折行 */
+	white-space: nowrap;
+	/* 文字自动变省略号步骤2：溢出的文本一律隐藏 */
+	overflow: hidden;
+	/* 文字自动变省略号步骤3：如果发生了文本溢出，则用省略号代替 */
+	text-overflow: ellipsis;
+}
+.f6 .ser-name{
+	font-family: "华文楷体";
+	font-size: 1rem;
+	transform: scale(.48);
+	transform-origin: top left;
+	color: #8c8b8b;
+	text-align:left;
+}
+
+.f6 .menu{
+	flex:1;
+	text-align: center;
+	margin-right: -9px;
+	padding-left: 3px;
+}

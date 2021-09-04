@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+	<link rel="stylesheet" href="css/geci.css">
+</head>
+<body>
+	<div class="back">
+		<img id="moveBack" src="img/left.png">
+	</div>
+	<div class="lrc">
+		<div class="content"></div>
+	</div>
+	<div>
+		<audio id="bgm" src="audio/2.mp3" >
+			当前浏览器不支持audio
+		</audio>
+	</div>
+	<div class="col">
+		<!-- 播放 -->
+		<div class="play">
+			<img id="playing" class="play-ing" src="img/play.png">
+		</div>
+	</div>
+	<textarea id="lrc">
+		[00:00.000]小半 (Live) - 骆蕾
+		[00:02.428]词：涂玲子
+		[00:03.228]曲：陈粒
+		[00:03.876]原唱：陈粒
+		[00:04.718]不敢回看
+		[00:05.679]左顾右盼不自然地暗自喜欢
+		[00:06.010]偷偷搭讪总没完地坐立难安
+		[00:07.467]试探说晚安 多空泛又心酸
+		[00:08.898]低头呢喃
+		[00:09.020]对你的偏爱太过于明目张胆
+		[00:10.416]在原地打转的小丑伤心不断
+		[00:11.865]空空留遗憾 多难堪又为难
+		[00:12.964]释然 慵懒 尽欢
+		[00:13.360]时间风干后你与我再无关
+		[00:14.717]没答案 怎么办
+		[00:15.098]看不惯我自我欺瞒
+		[00:16.537]纵容着 喜欢的 讨厌的
+		[00:17.028]宠溺的 厌倦的
+		[00:18.238]一个个慢慢黯淡
+		[01:19.433]纵容着 任性的 随意的
+		[01:14.730]放肆的 轻易的
+		[01:16.974]将所有欢脱倾翻
+		[01:20.167]不应该 太心软 不大胆
+		[01:23.524]太死板 不果断
+		[01:25.654]玩弄着肆无忌惮
+
+
+	</textarea>
+	<script src="js/mui.js"></script>
+	<script type="text/javascript">
+		var bgm=document.getElementById("bgm");
+		
+		var con = document.getElementsByClassName("content")[0];
+		var txt=document.getElementById("lrc");
+		var lrc=txt.value;//获取文本域的值
+		var lrcArr=lrc.split("[");
+		
+		var html="";//定义一个空变量来保存文本
+		for(var i=0;i<lrcArr.length; i++)
+		{
+			var arr = lrcArr[i].split(']')
+			// 此时，lrcArr[0]是时间，lrcArr[1]是歌词
+			var allTime=arr[0].split(".");//通过切割点去掉毫秒,保存分钟和秒钟
+			var time = allTime[0].split(":");
+			var timer = time[0]*60 + time[1]*1;
+			//讲时间转化为秒钟，time[1]要乘1
+			// console.log(timer);
+			var text = arr[1];//文本
+			if(text){
+				// 用一个p标签来保存每一条歌词
+				html +="<p id="+timer+">"+text+"<p>";
+			}
+			// console.log(arr[1]);
+			con.innerHTML = html;//叭html文本添加到歌词盒子
+		}
+		var oP = con.getElementsByTagName("p");
+		var num = 0;
+		bgm.addEventListener("timeupdate",function(){
+			// 获取当前播放时间
+			var curTime =parseInt(this.currentTime);
+			 // console.log(curTime);//检查大法
+			if(document.getElementById(curTime)){
+				// 讲当前时间与p标签的id名进行对比，若相同就使其变色
+				for(var i=0;i<oP.length;i++)
+				{
+					oP[i].style.color="#fff";
+				}
+				document.getElementById(curTime).style.color="rgb(240,248,100)";
+				 if (oP[num].id == curTime)
+				// //判断成功则num+1.故同样的值只会生效一次
+				 {
+					con.style.top = -20*num + "px";
+					num++;
+				}
+				
+			}
+		});
+		
+		playing.onclick = function(){
+			if(bgm.paused){//如果在暂停状态
+				bgm.play()
+				playing.src='img/pause.png'
+			}
+			else{
+				bgm.pause()//如果在播放状态
+				playing.src='img/play.png'
+			}
+		}
+		//歌曲播放完暂停
+		bgm.onended = function(){
+			playing.src='img/play.png'
+		}
+		// 返回上一步
+		moveBack.onclick =function(){
+			location.href='play.html'
+		}
+	</script>
+</body>
+</html>

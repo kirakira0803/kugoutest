@@ -1,0 +1,164 @@
+	
+html{
+	height: 100%;
+}
+
+body{
+	height: 100%;
+	background-image: url(../img/bg1.jpg);
+	background-color:pink;
+	color:white;
+	margin: 0;
+	background-size: 100% 100%;
+}
+	
+.title{
+	font-family: '幼圆';
+	font-size: 2rem;
+	color: white;
+	-webkit-font-smoothing: auto;
+	text-align: left;
+	position: fixed;
+	top:20.73vh;
+	left:40.09vw;
+	letter-spacing: 0.28rem;
+}
+	
+.slogan{
+	font-family: "华文细黑";
+	color: white;
+	-webkit-font-smoothing: auto;
+	font-size: 0.8rem;
+	position: fixed;
+	left: 40.7vw;
+	top: 27.6vh;
+	letter-spacing: 0.55rem;
+}
+
+@media screen and (min-width:374px) and (max-width:376px) {	
+	.slogan{
+		top:26vh;
+	}
+}
+.close{
+	position: fixed;
+	left: 5.3vw;
+	top: 3.8vh;
+	padding: 5px;
+	border-radius: 5px;
+}
+/*激活态-伪类选择器  */
+.close:active{
+	background-color: rgb(255,255,255,0.2);
+}
+
+.K{
+	width: 16.4vw ;
+	position: fixed;
+	top:20.8vh;
+	left:17.3vw;
+}
+	
+.weibo{
+	position: fixed;
+	left: 20.8vw;
+	bottom: 13vh;
+	width: 7.9vw;
+}
+	
+.QQ{
+	width: 6.1vw;
+	position: fixed;
+	left: 47vw;
+	bottom: 13vh;
+}
+
+.weixin{
+	width: 7.5vw;
+	position: fixed;
+	right: 19.6vw;
+	bottom: 13vh;
+	
+} 
+	
+.login{
+	font-family:STKaiti;
+	font-size: 17pt;
+	-webkit-font-smoothing: auto;
+	position: fixed;
+	width: 69vw;
+	height: 5.5vh;
+	color: white;
+	background-color: rgb(12,150,230);
+	/* background-color: pink; */
+	left: 15.6vw;
+	bottom: 36.1vh;
+	border-radius: 2.75vh;
+	border: none;
+	outline: none;
+}
+	
+.login:active{
+	background-color: #0974b3
+}
+
+.register{
+	font-family:STKaiti;
+	font-size: 17pt;
+	-webkit-font-smoothing: auto;
+	position: fixed;
+	width: 69vw;
+	height: 5.5vh;
+	color: white;
+	background-color: rgb(12,230,197);
+	left: 15.6vw;
+	bottom: 28.5vh;
+	border-radius: 2.75vh;
+	border: none;
+	outline: none;
+}
+	
+.register:active{
+	background-color: #09b399;
+}
+	
+.separator{
+	border-top: 1px solid white;
+	position: fixed;
+	width: 27.1vw;
+	bottom:21.6vh;
+}
+	
+.separator.left{
+	left: 10.7vw;
+}
+
+.separator.right{
+	right: 10.7vw;
+}
+
+.other{
+	font-family:STKaiti;
+	font-size: 0.72rem;
+	-webkit-font-smoothing: auto;
+	position: fixed;
+	left: 39.5vw;
+	bottom: 20.8vh;
+	letter-spacing: 0.16rem;
+}
+	
+.agreement{
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 3.75vh;
+	font-family: 华文楷体;
+	font-size: 0.6rem;
+	text-align: center;
+}
+	
+.agreement a{
+	color: #0496ea;
+	text-decoration: none;
+	target: _blank;
+}

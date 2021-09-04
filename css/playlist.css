@@ -1,0 +1,223 @@
+/* 选中html元素 */
+html {
+	/* 高度 */
+	height: 100%;
+}
+/* 选中body元素 */
+body {
+	height: 100%;
+	/* 背景颜色 */
+	background-color: #00f;
+	/* 背景图片 */
+	background-image: url(../img/bg2.jpg);
+	/* 背景图片大小 */
+	background-size: 100% 100%;
+	/* 去掉外间距 */
+	margin: 0;
+	/* 指定默认文本字体*/
+	font-family: "华文楷体";
+	/* 默认文本颜色 */
+	color: #fff;
+	/* 背景图的附加方式 ps:让背景图不滚动*/
+	background-attachment: fixed;
+	/* 默认字体大小 */
+	font-size: 0.84rem;
+}
+body:before {
+	content: '';
+	display: table;
+}
+.row{
+	display: flex;
+	text-align: center;
+}
+
+#back{
+	padding-top:10px;
+}
+/* f1 */
+.F1 .row{
+	display: flex;
+}
+.F1 .col:nth-child(2) {
+	position: fixed;
+	left: 46.759vw;
+	top: 6.51vh;
+}
+.F1 .playlistsearch {
+	position: fixed;
+	left: 5.185vw;
+	top: 6.302vh;
+}
+.F1 .playlistmore {
+	position: fixed;
+	right: 9.167vw;
+	top: 7.24vh;
+}
+
+/* f2 */
+.F2 {
+	margin-top: 16.771vh;
+}
+.F2 .row{
+	display: flex;
+}
+.F2 .col {
+	flex:1;
+	text-align: center;
+}
+.F2 .wenzi{
+	font-size: 0.8438rem;
+	color: #a6a8ad;
+}
+.F2 .wenzi.active {
+	color: #fff;
+}
+/* 下划线的样式设定 */
+.F3 {
+	margin-top: 3.229vh;
+}
+.F3 .row{
+	display: flex;
+}
+.F3 .xiahuaxian1{
+	flex:1;
+	height: 1px;
+	background-image: linear-gradient(to left,#6e7283,transparent);
+}
+.F3 .xiahuaxian2{
+	flex:1;
+	height: 1px;
+	background-image: linear-gradient(to right,#6e7283,transparent);
+}
+/* 用于加加++++++++内容 */
+
+.song-name{
+	
+	font-size: .8438rem;
+	text-align: left;
+	margin-left: 8.24vw;
+	
+}
+
+.band{
+	position: relative;
+	transform: scale(.5626);
+	margin-top: 1vh;
+	text-align: left;
+	margin-left: 8.24vw;
+	left: -32px;
+}
+.top{
+	padding-top: 3.29vh;
+	margin-right: 7.69vw;
+}
+
+.top .row{
+	margin-left: 7.31vw;
+	padding-bottom: 3.07vh;
+	/* border-bottom: 0.15625vh solid transparent ; */
+
+}
+.top .col{
+	text-align: center;
+}
+
+.top .col:nth-child(1) img{
+	position: relative;
+	vertical-align: middle;
+	top: -1.5px;
+}
+
+.top .col:nth-child(1){
+	flex: 114;
+	height: 10.46vw;
+	width: 10.46vw;
+	border: 2px solid #969da8;
+	border-radius: 50%;
+	line-height: 10.46vw;
+}
+
+.top .col:nth-child(2){
+	flex: 615;
+}
+.top .col:nth-child(3){
+	flex: 274;
+}
+
+.time_dur{
+	position: relative;
+	top: 13px;
+	left: 25px;
+	display: inline-block;
+}
+
+.time_img{
+	display: none;
+	position: relative;
+	left: 7vw;
+	top: 2.5vh;
+}
+
+
+
+/* f4 */
+.top.f4{
+	/* padding-top: 3.29vh; */
+	/* margin-right: 7.69vw; */
+	border-top: 0.15625vh transparent solid;
+	border-image: linear-gradient(to right,transparent,#6f7285,transparent) 1 5;
+}
+
+
+/* 空白元素用于填充最后一层的样式 */
+.kongbai {
+	width: 100vw;
+	height: 9.063vh;
+}
+/* fn 懒得数第几层了 */
+.Fn {
+	width: 100vw;
+	height: 9.063vh;
+	background-color: #151f28;
+	position: fixed;
+	bottom: 0;
+	text-align: center;
+	font-size: 0.409rem;
+}
+.Fn .row{
+	display: flex;
+}
+.Fn .col{
+	flex: 1;
+}
+.Fn .tubiao1 {
+	margin-top: 1.979vh;
+}
+.Fn .tubiaoyu1 {
+	margin-top: 0.53vh;
+}
+.Fn .tubiao2 {
+	margin-top: 1.979vh;
+}
+.Fn .tubiaoyu2 {
+	margin-top: 0.6vh;
+}
+.Fn .tubiao3 {
+	margin-top: 1.979vh;
+}
+.Fn .tubiaoyu3 {
+	margin-top: 0.8vh;
+}
+.Fn .tubiao4 {
+	margin-top: 1.979vh;
+}
+.Fn .tubiaoyu4 {
+	margin-top: 1.2vh;
+}
+.Fn .tubiao5 {
+	margin-top: 1.979vh;
+}
+.Fn .tubiaoyu5 {
+	margin-top: 0.4vh;
+} 

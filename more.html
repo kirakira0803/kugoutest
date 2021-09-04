@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		html{
+			height: 100%;
+		}
+		
+		body{
+			height: 100%;
+			background-color: black;
+			margin: 0;
+		}
+		
+		.txt{
+			margin-left: auto;
+			margin-right: auto;
+			text-align: center;
+			padding-top: 5px;
+			color: pink;
+			font-size: 1rem;
+			border: 1px solid #00f;
+			width: 50%;
+		}
+			
+		.back{
+			padding-top: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<div class="back">
+			<img id="back" src="img/left.png" alt="返回">
+		</div>
+		<div class="txt add">
+			<span id="add">添加到歌单</span>
+		</div>
+		<div class="txt singer">
+			<span>歌手信息</span>
+		</div>
+		<div class="txt zhuanji">
+			<span>专辑信息</span>
+		</div>
+		<div class="txt smilar">
+			<span>相似推荐</span>
+		</div>
+		<div class="txt share">
+			<span>分享歌词海报</span>
+		</div>
+		<div class="txt song-inf">
+			<span>歌曲信息</span>
+		</div>
+		<div class="txt set">
+			<span>设为手机铃声</span>
+		</div>
+	</div>
+	<script src="js/mui.js"></script>
+	<script>
+		back.onclick=function(){
+			location.href="play.html";
+		}
+	</script>
+	
+</body>
+</html>
